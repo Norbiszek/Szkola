@@ -1,0 +1,61 @@
+/*
+ * kalk.cpp
+ */
+
+
+#include <iostream>
+
+using namespace std;
+
+void kalkulator(double a, double b, char znak){
+	switch(znak){
+	
+	case '+':
+		cout << "Wynik dodawania: " << a + b << endl;
+	break;
+	
+	case '-':
+		cout << "Wynik odejmowania: " << a - b << endl;
+	break;
+	
+	case '*':
+		cout << "Wynik mnożenia: " << a * b << endl;
+	break;
+	
+	case '/':
+		if(b != 0)
+			cout << "Wynik dodawania: " << a / b << endl;
+		else
+			cout << "Nie można dzielić przez zero" << endl;
+	break;
+	}
+}
+
+int main(int argc, char **argv)
+{
+	int n = 0;
+	double a;
+	double b;
+	char znak;
+	
+	cout << "Podaj ilość wykonywanych działań: ";
+	cin >> n;
+	
+	for(int i = 0; i < n; i++){
+	
+	cout << "Podaj pierwszą liczbę: ";
+	cin >> a;
+	
+	cout << "Podaj znak ('+', '-', '*', '/')";
+	cin >> znak;
+	
+	cout << "Podaj drugą liczbę: ";
+	cin >> b;
+
+	kalkulator(a, b, znak);
+}	
+	
+	
+	return 0;
+}
+
